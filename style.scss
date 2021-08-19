@@ -1,0 +1,265 @@
+/* POLICE */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap");
+
+/* COLORS */
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$background-color: #f6f6f6;
+$color-shadow: #dedada;
+$gradient: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+
+/* MIXIN */
+@mixin flexbox-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin font-big {
+    font-size: 25px;
+    font-weight: 600;
+}
+@mixin font-medium {
+    font-size: 16px;
+    font-weight: 400;
+}
+@mixin font-medium-bold {
+    font-size: 18px;
+    font-weight: 600;
+}
+@mixin font-light {
+    font-size: 16px;
+    font-weight: 100;
+}
+
+/* use the font */
+body {
+    font-family: "Roboto", sans-serif;
+    margin:0;
+    h1 {
+    @include font-big;
+    }
+    h2 {
+    @include font-big;
+    margin: 20px 0 0 20px;
+    }
+    h3 {
+    @include font-medium-bold;
+    }
+    h4 {
+    @include font-medium;
+    }
+    p {
+    @include font-light;
+    }
+    section {
+    padding-top: 20px;
+    }
+}
+
+/* HEADER */
+#logo {
+    @include flexbox-center;
+    padding:25px 0 10px 0;
+}
+#logo img {
+    height: 30px;
+}
+.localisation {
+    @include flexbox-center;
+    background-color: darken($background-color, 5%);
+    box-shadow: lightgrey 0px 3px 3px inset;
+    margin: 0;
+}
+.localisation__icon {
+    padding:10px;
+    @include font-medium;
+}
+/* INTRODUCTION */
+.Introduction {
+    background-color: $background-color;
+    padding: 40px;
+    text-align: center;
+}
+.Introduction__titre {
+    margin:0;
+}
+.Introduction p {
+    font-size: 18px;
+}
+.btn {
+    background: $gradient;
+    border-radius: 50px;
+    box-shadow: 3px 3px 3px $color-shadow;
+    @include font-medium;
+    text-align: center;
+    color:white;
+    border:0;
+    padding:15px 20px;
+    margin:10px 0;
+    transform: scale(1);
+    transition: transform 0.2s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+      }
+}
+/* FONCTIONNEMENT */
+
+.bloc_fonctionnement__cube {
+    @include font-medium;
+    border-radius: 15px;
+    box-shadow: 3px 3px 3px $color-shadow;
+    background-color: $background-color;
+    text-align: left;
+    border:0;
+    padding:25px 0 25px 30px;
+    margin:20px 20px 30px 35px;
+    cursor: pointer;
+    transition-duration: 1s;
+    
+    &:hover {
+    background: lighten($color-primary, 35%);
+    
+    }
+    &:hover > .icon {
+    color: $color-primary;
+    }
+}
+  .number {
+    background: $color-primary;
+    color: white;
+    height: 25px;
+    width: 25px;
+    border-radius: 100px;
+    @include flexbox-center;
+    position: absolute;
+    left:20px;
+  }
+
+.icon {
+padding-right:20px;
+color:rgb(99, 99, 99);
+}
+
+/* RESTAURANTS */
+
+.titre__restaurant {
+    background-color: $background-color;
+    padding:20px 10px 10px 0;
+}
+.bloc_restaurants {
+    background-color: $background-color;
+    height:auto;
+    width: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 60px;
+    justify-items: center;
+}
+    .bloc_restaurant__cube {
+    position : relative;
+    width: 90%;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 0 $color-shadow; 
+    margin:15px 15px 5px 15px;
+    transform: scale(1);
+    transition: transform 0.5s;
+  
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.03); 
+    }
+}
+.decorationNone {
+    text-decoration: none;
+    color:inherit;
+    }
+.bloc_restaurant__cube__cartouche {
+    display:flex;
+    align-items:center;
+    width: 100%;
+    line-height: 8px;
+    padding: 5px 0 5px 15px;
+}
+.coeur {
+    position: absolute;
+    right:0;
+    font-size:20px;
+    color:rgb(99, 99, 99);
+    padding-right:20px;
+}
+.photo {
+    width: 100%;
+    height: 170px;
+    border-radius: 15px 15px 0 0;
+}
+.bloc_restaurant__nouveau {
+    @include flexbox-center;
+    font-size: 14px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 30px;
+    color: darken($color-tertiary, 40%);
+    background-color: $color-tertiary;
+}
+
+$restaurants: jay, stil, toa, louis;
+
+@each $restaurant in $restaurants {
+    .photo-#{$restaurant} {
+    background: url(images/restaurants/#{$restaurant}.jpg);
+    background-position: center;
+    background-size:cover;
+    }
+}
+
+
+/* FOOTER */
+.footer {
+    background-color: darken($background-color, 75%);
+    padding: 15px 0 20px 20px;
+    line-height: 25px;
+    font-size: 15px;
+    color:white;
+  }
+.logofooter {
+    filter:invert(100%);
+    height:16px;
+    padding:15px 0 15px 0;
+}
+.footer i {
+    color:white;
+    padding-right:10px;
+}
+@media only screen and (min-width : 600px) {
+    .bloc_restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .bloc_fonctionnement {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .number {
+        position:relative;
+    }
+}
+@media only screen and (min-width : 725px) {
+
+    .footer {
+        @include flexbox-center;
+    }
+    .link {
+        padding-right:20px;
+    }
+    .logofooter {
+        padding:4px 20px 0 0;
+    }
+}
