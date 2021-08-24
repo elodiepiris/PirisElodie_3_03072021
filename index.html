@@ -12,13 +12,12 @@
 </head>
 <body>
 <!-- Loader -->
-<div class="loader">
-    <div class="load">
-        <div class="load__circle"></div>
-        <div class="load__circle"></div>
-        <div class="load__circle"></div>
-    </div>
- </div>
+<div class="loader"> 
+    <div class="loader__item__container"> 
+        <div class="loader__item"></div> 
+        <p class="fleft"><a class="jauge" href="#"><span class="jauge-remplissage3"></span>
+    </div> 
+</div>
   <header>
 <!-- logo and navigation -->
         <div id="logo">
@@ -39,17 +38,21 @@
         <h2>Fonctionnement</h2>
         <div class="bloc_fonctionnement"> 
             <div class="bloc_fonctionnement__cube">
-                <div>
+                <div class=number_bloc>
                 <div class="number">1</div>
                 </div>
                 <i class="icon fas fa-mobile-alt"></i>Choisissez un restaurant
             </div>
             <div class="bloc_fonctionnement__cube">
+                <div class=number_bloc>
                 <div class="number">2</div>
+                </div>
                 <i class="icon fas fa-list-ul"></i> Composez votre menu
             </div>
             <div class="bloc_fonctionnement__cube">
-                <div class="number">4</div>
+                <div class=number_bloc>
+                <div class="number">3</div>
+                </div>
                 <i class="icon fas fa-store"></i> Dégustez au restaurant
             </div>
     </div>
@@ -65,10 +68,13 @@
                 <div class="photo photo-jay">
                 </div>               
                 <div class="bloc_restaurant__cube__cartouche">
-                    <i class="coeur far fa-heart"></i>
                     <div>
                     <h3>La palette du goût</h3>
                     <p>Ménilmontant</p>
+                    <span class="heart-icons__container">
+                        <i class="heart-icon icon-empty far fa-heart"></i>
+                        <i class="heart-icon icon-full fas fa-heart"></i>
+                    </span>
                     </div>
                 </div>
                 <div class ="bloc_restaurant__nouveau">Nouveau</div>
@@ -76,10 +82,13 @@
             <a href="#" class="bloc_restaurant__cube decorationNone">
                 <div class="photo photo-stil"></div>
                 <div class="bloc_restaurant__cube__cartouche">
-                    <i class="coeur far fa-heart"></i>
                     <div>
                     <h3>La note enchantée</h3>
                     <p>Charonne</p>
+                    <span class="heart-icons__container">
+                        <i class="heart-icon icon-empty far fa-heart"></i>
+                        <i class="heart-icon icon-full fas fa-heart"></i>
+                    </span>
                     </div>
                 </div>
                 <div class ="bloc_restaurant__nouveau">Nouveau</div>
@@ -88,10 +97,13 @@
                 <div class="photo photo-toa">
                 </div>
                 <div class="bloc_restaurant__cube__cartouche">
-                    <i class="coeur far fa-heart"></i>
                     <div>
                     <h3>À la française</h3>
                     <p>Cité Rouge</p>
+                    <span class="heart-icons__container">
+                        <i class="heart-icon icon-empty far fa-heart"></i>
+                        <i class="heart-icon icon-full fas fa-heart"></i>
+                    </span>
                     </div>
                 </div>
             </a>
@@ -99,10 +111,13 @@
                 <div class="photo photo-louis">
                 </div>
                 <div class="bloc_restaurant__cube__cartouche">
-                    <i class="coeur far fa-heart"></i>
                     <div>
                     <h3>Le délice des sens</h3>
                     <p>Folie-Méricourt</p>
+                    <span class="heart-icons__container">
+                        <i class="heart-icon icon-empty far fa-heart"></i>
+                        <i class="heart-icon icon-full fas fa-heart"></i>
+                    </span>
                     </div>
                 </div>
             </a>

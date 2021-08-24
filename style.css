@@ -108,16 +108,17 @@ body section {
   margin: 10px 0;
   -webkit-transform: scale(1);
           transform: scale(1);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: -webkit-transform 0.08s;
+  transition: -webkit-transform 0.08s;
+  transition: transform 0.08s;
+  transition: transform 0.08s, -webkit-transform 0.08s;
   cursor: pointer;
 }
 
 .btn:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  opacity: 0.8;
 }
 
 /* FONCTIONNEMENT */
@@ -133,8 +134,8 @@ body section {
   padding: 25px 0 25px 30px;
   margin: 20px 20px 30px 35px;
   cursor: pointer;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
 }
 
 .bloc_fonctionnement__cube:hover {
@@ -223,17 +224,57 @@ body section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   width: 100%;
   line-height: 8px;
   padding: 5px 0 5px 15px;
 }
 
-.coeur {
+.heart-icons__container {
   position: absolute;
-  right: 0;
-  font-size: 20px;
-  color: #636363;
-  padding-right: 20px;
+  right: 50px;
+  top: 30px;
+  height: 24px;
+  width: 30px;
+}
+
+.heart-icons__container:hover .icon-full {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.heart-icons__container:hover .icon-empty {
+  background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart-icons__container .heart-icon {
+  position: absolute;
+  inset: 0px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.heart-icons__container .icon-empty {
+  background: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart-icons__container .icon-full {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  font-size: 25px;
+  background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  z-index: 1;
 }
 
 .photo {
@@ -315,13 +356,30 @@ body section {
         grid-template-columns: 1fr 1fr;
   }
   .bloc_fonctionnement {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .bloc_fonctionnement__cube {
+    padding: 20px 55px;
   }
   .number {
-    position: relative;
+    display: none;
+  }
+  h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
