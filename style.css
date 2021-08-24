@@ -30,6 +30,12 @@ body h4 {
   font-weight: 400;
 }
 
+body h5 {
+  font-family: Shrikhand, sans-serif;
+  font-size: 28px;
+  margin: 10px 0 0 0;
+}
+
 body p {
   font-size: 16px;
   font-weight: 100;
@@ -37,7 +43,6 @@ body p {
 
 body section {
   padding-top: 20px;
-  width: 100%;
 }
 
 /* HEADER */
@@ -317,6 +322,115 @@ body section {
   background: url(images/restaurants/louis.jpg);
   background-position: center;
   background-size: cover;
+}
+
+/* PALETTE DU GOUT */
+.headmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fleche_retour {
+  padding: 20px;
+}
+
+.banner {
+  background: url("images/restaurants/jay.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 280px;
+}
+
+/* PALETTE DU GOUT MENU */
+.bloc_menu {
+  height: 100%;
+  background-color: #f6f6f6;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 30px 0 20px 0 10px;
+  -webkit-transform: translateY(-20%);
+          transform: translateY(-20%);
+  padding-bottom: 40px;
+}
+
+.bloc_menu__titre {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0 0 20px;
+}
+
+.bloc_menu__titre .icon-vide, .bloc_menu__titre .icon-full {
+  top: 20px;
+}
+
+.bloc_menu__soustitre {
+  text-transform: uppercase;
+  color: #5d5d5d;
+  font-weight: 400;
+  margin: 30px 0 0 20px;
+}
+
+.bloc_menu__encarts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bloc_menu__encarts:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+.bloc_menu__cartouche {
+  width: 90%;
+  margin: 20px 20px 0 20px;
+  background-color: white;
+  padding: 20px 20px;
+  -webkit-box-shadow: 3px 3px 3px #dedada;
+          box-shadow: 3px 3px 3px #dedada;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  border-radius: 15px;
+}
+
+.bloc_menu__description {
+  font-size: 16px;
+  font-weight: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bloc_menu__name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.prix {
+  font-weight: 600;
+  text-align: right;
+}
+
+.border {
+  border-bottom: #99E2D0 3px solid;
+  margin: 5px 0;
+  width: 40px;
 }
 
 /* FOOTER */
