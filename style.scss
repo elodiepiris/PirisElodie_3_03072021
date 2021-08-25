@@ -7,8 +7,11 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $background-color: #f6f6f6;
-$color-shadow: #dedada;
+$color-shadow: #dbdbdb;
 $gradient: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
+
+/* OMBRE */
+$shadow: 0 2px 8px $color-shadow;
 
 /* MIXIN */
 @mixin flexbox-center {
@@ -46,7 +49,7 @@ body {
     }
     h2 {
     @include font-big;
-    margin: 20px 0 0 20px;
+    margin: 10px 0 0 20px;
     }
     h3 {
     @include font-medium-bold;
@@ -62,11 +65,46 @@ body {
     p {
     @include font-light;
     }
-    section {
-    padding-top: 20px;
-    }
 }
-
+/* LOADER */
+.chargement {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    height:100%;
+    width:100%;
+    z-index: 1000;
+    @include flexbox-center;
+    animation: loader 2s forwards;
+  }
+  .chargement::before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-top: 12px solid $color-primary;
+    border-right: 12px solid $color-secondary;
+    border-bottom: 12px solid $color-tertiary;
+    border-left: 12px solid $color-shadow;
+    border-radius: 100%;
+    animation: roll 2s linear;
+  }
+  
+  @keyframes loader {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes roll {
+    0% {
+      transform: rotate(-360deg);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 /* HEADER */
 #logo {
     @include flexbox-center;
@@ -102,7 +140,8 @@ body {
 .btn {
     background: $gradient;
     border-radius: 50px;
-    box-shadow: 3px 3px 3px $color-shadow;
+    min-width:180px;
+    box-shadow: $shadow;
     @include font-medium;
     text-align: center;
     color:white;
@@ -115,25 +154,41 @@ body {
     &:hover {
         transform: scale(1.05);
         opacity:0.8;
+        box-shadow: 0 2px 8px darken($background-color, 40%);
+      }
+      &__commander {
+          margin:30px 0 0 0;
+          display: flex;
+          justify-content: center;
+
       }
 }
 /* FONCTIONNEMENT */
-.bloc_fonctionnement__cube {
+section > h2 {
+    background-color:white;
+    padding:40px 0 25px 30px;
+    margin:0;
+}
+.bloc_fonctionnement {
+    background: white;
+    padding-bottom:30px;
+    &__cube {
     @include font-medium;
     border-radius: 25px;
-    box-shadow: 3px 3px 3px $color-shadow;
+    box-shadow: $shadow;
     background-color: $background-color;
     text-align: left;
     border:0;
     padding:25px 0 25px 30px;
-    margin:20px 20px 30px 35px;
+    margin:0 20px 30px 35px;
     cursor: pointer;
     transition-duration: 0.5s;
-    &:hover {
-    background: lighten($color-primary, 35%);
-    }
-    &:hover > .icon {
-    color: $color-primary;
+        &:hover {
+        background: lighten($color-primary, 35%);
+        }
+        &:hover > .icon {
+        color: $color-primary;
+        } 
     }
 }
 .number {
@@ -174,7 +229,7 @@ color:rgb(99, 99, 99);
         height: auto;
         background-color: white;
         border-radius: 20px;
-        box-shadow: 0 0 5px 0 $color-shadow; 
+        box-shadow: $shadow;
         margin:15px 15px 5px 15px;
         transform: scale(1);
         transition: transform 0.5s;
@@ -248,80 +303,118 @@ $restaurants: jay, stil, toa, louis;
     background-size:cover;
     }
 }
-    /* PALETTE DU GOUT */
+/* PALETTE DU GOUT */
     .headmenu {
-        display:flex;
-        }
-        .fleche_retour {
-            padding:20px;
-        }
-        .banner {
-        background: url("images/restaurants/jay.jpg");
-        background-position: center;
-        background-size:cover;
-        height:280px;
-        }
-        /* PALETTE DU GOUT MENU */
-        .bloc_menu {
-            height: 100%;
-            background-color: $background-color;
-            border-top-left-radius: 50px;
-            border-top-right-radius: 50px;
-            padding: 30px 0 20px 0 10px;
-            transform: translateY(-20%);
-            padding-bottom:40px;
-            &__titre {
-                position:relative;
-                display:flex;
-                justify-content: space-between;
-                padding:20px 0 0 20px;
-                .icon-vide, .icon-full {
-                    top:20px;
-                }
-            }
-            &__soustitre {
-                text-transform: uppercase;
-                color:darken($background-color, 60%);
-                font-weight: 400;
-                margin:30px 0 0 20px;
-            }
-            &__encarts {
-                @include flexbox-center;
-                &:hover {
-                transform: scale(1.02);
-                }
-            }   
-            &__cartouche {
-                width:90%;
-                margin:20px 20px 0 20px;
-                background-color: white;
-                padding:20px 20px;
-                box-shadow: 3px 3px 3px $color-shadow;
-                cursor: pointer;
-                transition-duration: 0.5s;
-                border-radius: 15px;
-            }
-            &__description {
-            @include font-light;
-            display: flex;
-            justify-content: space-between;
-            }
-            &__name {
-            @include font-medium-bold;
-            }
-        }
-    .prix {
-        font-weight: 600;
-        text-align: right;
+    @include flexbox-center;
+    }  
+    .fleche_retour {
+        padding:20px;
     }
-
-    .border {
+    
+    .banner {
+    background: url("images/restaurants/jay.jpg");
+    background-position: center;
+    background-size:cover;
+    height:330px;
+    }
+     
+/* PALETTE DU GOUT MENU */
+section {
+    background-color: $background-color;
+}
+.bloc_menu { 
+    height: 100%;
+    background-color: $background-color;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px 0 20px 0 10px;
+    transform: translateY(-5%);
+        &__titre {
+        position:relative;
+        display:flex;
+        justify-content: space-between;
+        margin:0;
+        padding:20px 30px 0 30px;
+            .icon-vide, .icon-full {
+            top:20px;
+            }
+        }
+        &__soustitre {
+        margin:40px 20px 0 20px;
+        text-transform: uppercase;
+        color:darken($background-color, 60%);
+        font-weight: 400;
+        }
+        
+}
+.border {
     border-bottom: $color-tertiary 3px solid;
     margin: 5px 0;
     width: 40px;
 }
-    
-    
+.bloc_menu__container {
+    background: white;
+    box-shadow: $shadow;
+    border-radius: 15px;
+    display: flex;
+    margin:15px;
+    overflow: hidden;
+        &:hover .icone {
+        margin-right: 0;
+        transition-duration: 0.5s;
+        }
+        &:hover i {
+        transform: rotate(360deg);
+        transition-duration: 0.5s;
+        }
+    }
+.bloc_menu__cartouche {
+width: 100%;
+display: flex;
+overflow: hidden;
+}
+.bloc_menu__texte {
+    display:inline-block;
+    width: 100%;
+    margin-left:20px;
+    overflow: hidden;
+    h3 {
+    margin-bottom:0;
+    padding-right:10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    }
+    p {
+    margin-top:5px;
+    padding-right:10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;   
+    }
+}
+.prix {
+display: flex;
+align-items: flex-end;
+margin-bottom: 16px;
+margin-right: 20px;
+font-weight: 600;
+}
+.icone {
+width: 80px;
+background: $color-tertiary;
+@include flexbox-center;
+margin-right: -90px;
+transition-duration: 0.2s;
+transition-timing-function: ease;
+    > i {
+    color: $color-tertiary;
+    padding: 5px;
+    border-radius: 50%;
+    background: white;
+    transition-duration: 0.2s;
+    }
+}
 
 
 /* FOOTER */
@@ -368,9 +461,10 @@ $restaurants: jay, stil, toa, louis;
     }
     /* FONCTIONNEMENT */
     .bloc_fonctionnement {
+        background: white;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        width:100%;
+        padding: 0 10px;
         flex-wrap:wrap;
         &__cube {
             padding: 0 20px 20px 20px;
@@ -383,15 +477,33 @@ $restaurants: jay, stil, toa, louis;
             }  
         }
     }
-        .number {
+    .number {
             position: relative;
             top: -10px;
             left: 0;
-        }
-    }
+        } 
+}
 @media only screen and (min-width : 1000px) {
 /* RESTAURANT */
     .bloc_restaurant {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+}
+@media only screen and (min-width : 1200px) {
+/* PALETTE DU GOUT MENU */
+.bloc_menu {
+    padding-bottom:10px;
+    &__categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:0 20px;
+    }
+    &__soustitre { 
+    margin-left:35px;
+    }
+}
+.bloc_menu__container {
+    margin:10px;
+    }
+        
 }
