@@ -358,6 +358,7 @@ section {
     border-radius: 15px;
     display: flex;
     margin:15px;
+    animation: transition 2s ease;
     overflow: hidden;
         &:hover .icone {
         margin-right: 0;
@@ -368,11 +369,58 @@ section {
         transition-duration: 0.5s;
         }
     }
+@keyframes transition {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
 .bloc_menu__cartouche {
 width: 100%;
 display: flex;
-overflow: hidden;
 }
+.bloc_menu--anim01 {
+    animation: transition 1200ms ease-in 300ms both;
+}
+.bloc_menu--anim02 {
+    animation: transition 1200ms ease-in 400ms both;
+}
+.bloc_menu--anim03 {
+    animation: transition 1200ms ease-in 500ms both;
+}
+.bloc_menu--anim04 {
+    animation: transition 1200ms ease-in 600ms both;
+}
+.bloc_menu--anim04 {
+    animation: transition 1200ms ease-in 700ms both;
+}
+.bloc_menu--anim05 {
+    animation: transition 1200ms ease-in 800ms both;
+}
+.bloc_menu--anim06 {
+    animation: transition 1200ms ease-in 900ms both;
+}
+.bloc_menu--anim07 {
+    animation: transition 1200ms ease-in 1000ms both;
+}
+.bloc_menu--anim08 {
+    animation: transition 1200ms ease-in 1100ms both;
+}
+.bloc_menu--anim09 {
+    animation: transition 1200ms ease-in 1200ms both;
+}
+@keyframes transition {
+    0% {
+    transform: translateY(50px);
+    opacity: 0;
+    }
+    100% {
+    transform: translateY(0);
+    opacity: 1;
+    }
+  }
 .bloc_menu__texte {
     display:inline-block;
     width: 100%;

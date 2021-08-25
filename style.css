@@ -495,6 +495,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   margin: 15px;
+  -webkit-animation: transition 2s ease;
+          animation: transition 2s ease;
   overflow: hidden;
 }
 
@@ -511,12 +513,92 @@ section {
           transition-duration: 0.5s;
 }
 
+@-webkit-keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .bloc_menu__cartouche {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: hidden;
+}
+
+.bloc_menu--anim01 {
+  -webkit-animation: transition 1200ms ease-in 300ms both;
+          animation: transition 1200ms ease-in 300ms both;
+}
+
+.bloc_menu--anim02 {
+  -webkit-animation: transition 1200ms ease-in 400ms both;
+          animation: transition 1200ms ease-in 400ms both;
+}
+
+.bloc_menu--anim03 {
+  -webkit-animation: transition 1200ms ease-in 500ms both;
+          animation: transition 1200ms ease-in 500ms both;
+}
+
+.bloc_menu--anim04 {
+  -webkit-animation: transition 1200ms ease-in 600ms both;
+          animation: transition 1200ms ease-in 600ms both;
+}
+
+.bloc_menu--anim04 {
+  -webkit-animation: transition 1200ms ease-in 700ms both;
+          animation: transition 1200ms ease-in 700ms both;
+}
+
+.bloc_menu--anim05 {
+  -webkit-animation: transition 1200ms ease-in 800ms both;
+          animation: transition 1200ms ease-in 800ms both;
+}
+
+.bloc_menu--anim06 {
+  -webkit-animation: transition 1200ms ease-in 900ms both;
+          animation: transition 1200ms ease-in 900ms both;
+}
+
+.bloc_menu--anim07 {
+  -webkit-animation: transition 1200ms ease-in 1000ms both;
+          animation: transition 1200ms ease-in 1000ms both;
+}
+
+.bloc_menu--anim08 {
+  -webkit-animation: transition 1200ms ease-in 1100ms both;
+          animation: transition 1200ms ease-in 1100ms both;
+}
+
+.bloc_menu--anim09 {
+  -webkit-animation: transition 1200ms ease-in 1200ms both;
+          animation: transition 1200ms ease-in 1200ms both;
+}
+
+@keyframes transition {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .bloc_menu__texte {
