@@ -197,7 +197,7 @@ body p {
   cursor: pointer;
 }
 
-.btn:hover, .btn:active .btn:active {
+.btn:hover .btn:active {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   opacity: 0.8;
@@ -243,11 +243,11 @@ section > h2 {
           transition-duration: 0.5s;
 }
 
-.bloc_fonctionnement__cube:hover, .bloc_fonctionnement__cube:active, .bloc_fonctionnement__cube:active {
+.bloc_fonctionnement__cube:hover {
   background: #f2eafb;
 }
 
-.bloc_fonctionnement__cube:hover, .bloc_fonctionnement__cube:active > .icon {
+.bloc_fonctionnement__cube:hover > .icon {
   color: #9356DC;
 }
 
@@ -311,10 +311,10 @@ section > h2 {
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
+  cursor: pointer;
 }
 
-.bloc_restaurant__cube:hover, .bloc_restaurant__cube:active {
-  cursor: pointer;
+.bloc_restaurant__cube:hover {
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
 }
@@ -351,9 +351,10 @@ section > h2 {
   color: transparent;
   -webkit-transform: scale(0);
           transform: scale(0);
+  cursor: pointer;
 }
 
-.heart-icons__container:hover, .heart-icons__container:active .icon-full {
+.heart-icons__container:hover .icon-full {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -363,7 +364,7 @@ section > h2 {
   font-size: 25px;
 }
 
-.heart-icons__container:hover, .heart-icons__container:active .icon-vide {
+.heart-icons__container:hover .icon-vide {
   background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -500,15 +501,16 @@ section {
   -webkit-animation: transition 2s ease;
           animation: transition 2s ease;
   overflow: hidden;
+  cursor: pointer;
 }
 
-.bloc_menu__container:hover, .bloc_menu__container:active .icone {
+.bloc_menu__container:hover .icone {
   margin-right: 0;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-.bloc_menu__container:hover, .bloc_menu__container:active i {
+.bloc_menu__container:hover i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition-duration: 0.5s;

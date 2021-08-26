@@ -160,7 +160,7 @@ body {
     transform: scale(1);
     transition: transform 0.08s;
     cursor: pointer;
-    &:hover, &:active &:active {
+    &:hover &:active {
         transform: scale(1.05);
         opacity:0.8;
         box-shadow: 0 2px 8px darken($background-color, 40%);
@@ -192,10 +192,10 @@ section > h2 {
     margin:0 20px 30px 35px;
     cursor: pointer;
     transition-duration: 0.5s;
-        &:hover, &:active, &:active {
+        &:hover {
         background: lighten($color-primary, 35%);
         }
-        &:hover, &:active > .icon {
+        &:hover > .icon {
         color: $color-primary;
         } 
     }
@@ -242,8 +242,8 @@ color:rgb(99, 99, 99);
         margin:15px 15px 5px 15px;
         transform: scale(1);
         transition: transform 0.5s;
-        &:hover, &:active {
-            cursor: pointer;
+        cursor: pointer;
+        &:hover {
             transform: scale(1.03); 
         }
             &__cartouche {
@@ -271,15 +271,16 @@ color:rgb(99, 99, 99);
         -webkit-background-clip: text;
         color:transparent;
         transform: scale(0);
+        cursor: pointer;
         }
-            &:hover, &:active .icon-full {
+            &:hover .icon-full {
             transform: scale(1);
             }
         .icon-vide {
         position: absolute;
         font-size: 25px;
         }
-            &:hover, &:active .icon-vide {
+            &:hover .icon-vide {
         background: $gradient;
         background-clip: text;
         -webkit-background-clip: text;
@@ -374,11 +375,12 @@ section {
     margin:15px;
     animation: transition 2s ease;
     overflow: hidden;
-        &:hover, &:active .icone {
+    cursor: pointer;
+        &:hover .icone {
         margin-right: 0;
         transition-duration: 0.5s;
         }
-        &:hover, &:active i {
+        &:hover i {
         transform: rotate(360deg);
         transition-duration: 0.5s;
         }
