@@ -11,30 +11,32 @@ body {
 }
 
 body h1 {
-  font-size: 25px;
-  font-weight: 600;
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 15px 0 15px;
 }
 
 body h2 {
   font-size: 25px;
   font-weight: 600;
-  margin: 10px 0 0 20px;
 }
 
 body h3 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 28px;
+  margin: 10px 0 0 0;
+}
+
+body h4 {
   font-size: 18px;
   font-weight: 600;
 }
 
-body h4 {
+body h5 {
   font-size: 16px;
   font-weight: 400;
-}
-
-body h5 {
-  font-family: Shrikhand, sans-serif;
-  font-size: 28px;
-  margin: 10px 0 0 0;
 }
 
 body p {
@@ -154,7 +156,7 @@ body p {
   font-weight: 400;
 }
 
-.localisation h4 {
+.localisation h5 {
   margin: 15px 0;
 }
 
@@ -195,7 +197,7 @@ body p {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover, .btn:active .btn:active {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   opacity: 0.8;
@@ -216,7 +218,7 @@ body p {
 /* FONCTIONNEMENT */
 section > h2 {
   background-color: white;
-  padding: 40px 0 25px 30px;
+  padding: 40px 20px 25px 20px;
   margin: 0;
 }
 
@@ -241,11 +243,11 @@ section > h2 {
           transition-duration: 0.5s;
 }
 
-.bloc_fonctionnement__cube:hover {
+.bloc_fonctionnement__cube:hover, .bloc_fonctionnement__cube:active, .bloc_fonctionnement__cube:active {
   background: #f2eafb;
 }
 
-.bloc_fonctionnement__cube:hover > .icon {
+.bloc_fonctionnement__cube:hover, .bloc_fonctionnement__cube:active > .icon {
   color: #9356DC;
 }
 
@@ -276,7 +278,7 @@ section > h2 {
 /* RESTAURANTS */
 .titre__restaurant {
   background-color: #f6f6f6;
-  padding: 20px 10px 10px 0;
+  padding: 20px 10px 10px 20px;
 }
 
 .bloc_restaurant {
@@ -311,7 +313,7 @@ section > h2 {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-.bloc_restaurant__cube:hover {
+.bloc_restaurant__cube:hover, .bloc_restaurant__cube:active {
   cursor: pointer;
   -webkit-transform: scale(1.03);
           transform: scale(1.03);
@@ -351,7 +353,7 @@ section > h2 {
           transform: scale(0);
 }
 
-.heart-icons__container:hover .icon-full {
+.heart-icons__container:hover, .heart-icons__container:active .icon-full {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -361,7 +363,7 @@ section > h2 {
   font-size: 25px;
 }
 
-.heart-icons__container:hover .icon-vide {
+.heart-icons__container:hover, .heart-icons__container:active .icon-vide {
   background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -435,12 +437,6 @@ section > h2 {
   padding-left: 25px;
 }
 
-.headmenu > h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 30px;
-  text-align: center;
-}
-
 .banner {
   background: url("images/restaurants/jay.jpg");
   background-position: center;
@@ -506,13 +502,13 @@ section {
   overflow: hidden;
 }
 
-.bloc_menu__container:hover .icone {
+.bloc_menu__container:hover, .bloc_menu__container:active .icone {
   margin-right: 0;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
 }
 
-.bloc_menu__container:hover i {
+.bloc_menu__container:hover, .bloc_menu__container:active i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
   -webkit-transition-duration: 0.5s;
@@ -544,60 +540,60 @@ section {
   display: flex;
 }
 
-.bloc_menu--anim01 {
-  -webkit-animation: transition 1200ms ease-in 300ms both;
-          animation: transition 1200ms ease-in 300ms both;
+.bloc_menu--animation .animation-1 {
+  -webkit-animation: transition 200ms ease-in 200ms both;
+          animation: transition 200ms ease-in 200ms both;
 }
 
-.bloc_menu--anim02 {
-  -webkit-animation: transition 1200ms ease-in 400ms both;
-          animation: transition 1200ms ease-in 400ms both;
+.bloc_menu--animation .animation-2 {
+  -webkit-animation: transition 200ms ease-in 400ms both;
+          animation: transition 200ms ease-in 400ms both;
 }
 
-.bloc_menu--anim03 {
-  -webkit-animation: transition 1200ms ease-in 500ms both;
-          animation: transition 1200ms ease-in 500ms both;
+.bloc_menu--animation .animation-3 {
+  -webkit-animation: transition 200ms ease-in 600ms both;
+          animation: transition 200ms ease-in 600ms both;
 }
 
-.bloc_menu--anim04 {
-  -webkit-animation: transition 1200ms ease-in 600ms both;
-          animation: transition 1200ms ease-in 600ms both;
+.bloc_menu--animation .animation-4 {
+  -webkit-animation: transition 200ms ease-in 800ms both;
+          animation: transition 200ms ease-in 800ms both;
 }
 
-.bloc_menu--anim04 {
-  -webkit-animation: transition 1200ms ease-in 700ms both;
-          animation: transition 1200ms ease-in 700ms both;
+.bloc_menu--animation .animation-5 {
+  -webkit-animation: transition 200ms ease-in 1000ms both;
+          animation: transition 200ms ease-in 1000ms both;
 }
 
-.bloc_menu--anim05 {
-  -webkit-animation: transition 1200ms ease-in 800ms both;
-          animation: transition 1200ms ease-in 800ms both;
+.bloc_menu--animation .animation-6 {
+  -webkit-animation: transition 200ms ease-in 1200ms both;
+          animation: transition 200ms ease-in 1200ms both;
 }
 
-.bloc_menu--anim06 {
-  -webkit-animation: transition 1200ms ease-in 900ms both;
-          animation: transition 1200ms ease-in 900ms both;
+.bloc_menu--animation .animation-7 {
+  -webkit-animation: transition 200ms ease-in 1400ms both;
+          animation: transition 200ms ease-in 1400ms both;
 }
 
-.bloc_menu--anim07 {
-  -webkit-animation: transition 1200ms ease-in 1000ms both;
-          animation: transition 1200ms ease-in 1000ms both;
+.bloc_menu--animation .animation-8 {
+  -webkit-animation: transition 200ms ease-in 1600ms both;
+          animation: transition 200ms ease-in 1600ms both;
 }
 
-.bloc_menu--anim08 {
-  -webkit-animation: transition 1200ms ease-in 1100ms both;
-          animation: transition 1200ms ease-in 1100ms both;
+.bloc_menu--animation .animation-9 {
+  -webkit-animation: transition 200ms ease-in 1800ms both;
+          animation: transition 200ms ease-in 1800ms both;
 }
 
-.bloc_menu--anim09 {
-  -webkit-animation: transition 1200ms ease-in 1200ms both;
-          animation: transition 1200ms ease-in 1200ms both;
+.bloc_menu--animation .animation-10 {
+  -webkit-animation: transition 200ms ease-in 2000ms both;
+          animation: transition 200ms ease-in 2000ms both;
 }
 
 @keyframes transition {
   0% {
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
     opacity: 0;
   }
   100% {
@@ -614,7 +610,7 @@ section {
   overflow: hidden;
 }
 
-.bloc_menu__texte h3 {
+.bloc_menu__texte h4 {
   margin-bottom: 0;
   padding-right: 10px;
   overflow: hidden;

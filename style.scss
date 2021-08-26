@@ -19,6 +19,18 @@ $shadow: 0 2px 8px $color-shadow;
     justify-content: center;
     align-items: center;
 }
+@mixin font-shrikhand-titre {
+    font-family: "Shrikhand", cursive;
+    font-size: 30px;
+    text-align:center;
+    margin:0;
+    padding:15px 0 15px;
+}
+@mixin font-shrikhand-sous-titre {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 28px;
+    margin:10px 0 0 0;
+}
 @mixin font-big {
     font-size: 25px;
     font-weight: 600;
@@ -45,22 +57,19 @@ body {
     font-family: "Roboto", sans-serif;
     margin:0;
     h1 {
-    @include font-big;
+    @include font-shrikhand-titre;
     }
     h2 {
     @include font-big;
-    margin: 10px 0 0 20px;
     }
     h3 {
-    @include font-medium-bold;
+    @include font-shrikhand-sous-titre;
     }
     h4 {
-    @include font-medium;
+    @include font-medium-bold;
     }
     h5 {
-    font-family: Shrikhand, sans-serif;
-    font-size: 28px;
-    margin:10px 0 0 0;
+    @include font-medium;
     }
     p {
     @include font-light;
@@ -121,7 +130,7 @@ body {
     padding-right:10px;
     @include font-medium;
     }   
-    h4 {
+    h5 {
     margin:15px 0;
     }
 }
@@ -151,7 +160,7 @@ body {
     transform: scale(1);
     transition: transform 0.08s;
     cursor: pointer;
-    &:hover {
+    &:hover, &:active &:active {
         transform: scale(1.05);
         opacity:0.8;
         box-shadow: 0 2px 8px darken($background-color, 40%);
@@ -166,7 +175,7 @@ body {
 /* FONCTIONNEMENT */
 section > h2 {
     background-color:white;
-    padding:40px 0 25px 30px;
+    padding:40px 20px 25px 20px;
     margin:0;
 }
 .bloc_fonctionnement {
@@ -183,10 +192,10 @@ section > h2 {
     margin:0 20px 30px 35px;
     cursor: pointer;
     transition-duration: 0.5s;
-        &:hover {
+        &:hover, &:active, &:active {
         background: lighten($color-primary, 35%);
         }
-        &:hover > .icon {
+        &:hover, &:active > .icon {
         color: $color-primary;
         } 
     }
@@ -211,7 +220,7 @@ color:rgb(99, 99, 99);
 
 .titre__restaurant {
     background-color: $background-color;
-    padding:20px 10px 10px 0;
+    padding:20px 10px 10px 20px;
 }
 .bloc_restaurant {
     background-color: $background-color;
@@ -233,7 +242,7 @@ color:rgb(99, 99, 99);
         margin:15px 15px 5px 15px;
         transform: scale(1);
         transition: transform 0.5s;
-        &:hover {
+        &:hover, &:active {
             cursor: pointer;
             transform: scale(1.03); 
         }
@@ -263,14 +272,14 @@ color:rgb(99, 99, 99);
         color:transparent;
         transform: scale(0);
         }
-            &:hover .icon-full {
+            &:hover, &:active .icon-full {
             transform: scale(1);
             }
         .icon-vide {
         position: absolute;
         font-size: 25px;
         }
-            &:hover .icon-vide {
+            &:hover, &:active .icon-vide {
         background: $gradient;
         background-clip: text;
         -webkit-background-clip: text;
@@ -304,6 +313,7 @@ $restaurants: jay, stil, toa, louis;
     }
 }
 /* PALETTE DU GOUT */
+    
     .headmenu {
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -313,11 +323,6 @@ $restaurants: jay, stil, toa, louis;
     color:black;
     font-size: 20px;
     padding-left: 25px;
-    }
-.headmenu > h1 {
-        font-family: "Shrikhand", cursive;
-        font-size: 30px;
-        text-align:center;
     }
     
     .banner {
@@ -369,11 +374,11 @@ section {
     margin:15px;
     animation: transition 2s ease;
     overflow: hidden;
-        &:hover .icone {
+        &:hover, &:active .icone {
         margin-right: 0;
         transition-duration: 0.5s;
         }
-        &:hover i {
+        &:hover, &:active i {
         transform: rotate(360deg);
         transition-duration: 0.5s;
         }
@@ -386,43 +391,24 @@ section {
           opacity: 1;
         }
       }
+
+
+@mixin animation_menu {
+  @for $i from 1 through 10 {
+      .animation-#{$i} {animation: transition 200ms ease-in 100ms*$i*2 both;}
+  }
+}
 .bloc_menu__cartouche {
 width: 100%;
 display: flex;
 }
-.bloc_menu--anim01 {
-    animation: transition 1200ms ease-in 300ms both;
+.bloc_menu--animation {
+@include animation_menu;
 }
-.bloc_menu--anim02 {
-    animation: transition 1200ms ease-in 400ms both;
-}
-.bloc_menu--anim03 {
-    animation: transition 1200ms ease-in 500ms both;
-}
-.bloc_menu--anim04 {
-    animation: transition 1200ms ease-in 600ms both;
-}
-.bloc_menu--anim04 {
-    animation: transition 1200ms ease-in 700ms both;
-}
-.bloc_menu--anim05 {
-    animation: transition 1200ms ease-in 800ms both;
-}
-.bloc_menu--anim06 {
-    animation: transition 1200ms ease-in 900ms both;
-}
-.bloc_menu--anim07 {
-    animation: transition 1200ms ease-in 1000ms both;
-}
-.bloc_menu--anim08 {
-    animation: transition 1200ms ease-in 1100ms both;
-}
-.bloc_menu--anim09 {
-    animation: transition 1200ms ease-in 1200ms both;
-}
+
 @keyframes transition {
     0% {
-    transform: translateY(50px);
+    transform: translateY(10px);
     opacity: 0;
     }
     100% {
@@ -435,7 +421,7 @@ display: flex;
     width: 100%;
     margin-left:20px;
     overflow: hidden;
-    h3 {
+    h4 {
     margin-bottom:0;
     padding-right:10px;
     overflow: hidden;
