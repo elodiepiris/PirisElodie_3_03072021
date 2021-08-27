@@ -1,1 +1,279 @@
-/* No CSS *//*# sourceMappingURL=Menus.css.map */
+@-webkit-keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes loader_roll {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loader_roll {
+  0% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes transition_apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes transition_apparition {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes apparition_menu {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes apparition_menu {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* MIXINS FLEXBOX */
+/* MIXINS FONTS */
+/* MIXINS ANIMATIONS */
+/* COLORS */
+/* OMBRE */
+/* AUTRE */
+/* PAGES MENUS */
+.banner {
+  height: 300px;
+  width: 100%;
+}
+
+section {
+  background-color: #f6f6f6;
+}
+
+.bloc_menu {
+  height: 100%;
+  background-color: #f6f6f6;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding: 30px 0 20px 0 10px;
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+
+.bloc_menu__titre {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0;
+  padding: 20px 30px 0 30px;
+}
+
+.bloc_menu__titre .icon-vide, .bloc_menu__titre .icon-full {
+  top: 20px;
+}
+
+.bloc_menu__soustitre {
+  margin: 40px 20px 0 20px;
+  text-transform: uppercase;
+  color: #5d5d5d;
+  font-weight: 400;
+}
+
+.border {
+  border-bottom: #99E2D0 3px solid;
+  margin: 5px 0;
+  width: 40px;
+}
+
+.bloc_menu__container {
+  background: white;
+  -webkit-box-shadow: 0 2px 8px #dbdbdb;
+          box-shadow: 0 2px 8px #dbdbdb;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 15px;
+  -webkit-animation: transition_apparition 2s ease;
+          animation: transition_apparition 2s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bloc_menu__container:hover .icone {
+  margin-right: 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.bloc_menu__container:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.icone {
+  width: 80px;
+  background: #99E2D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: -90px;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.icone > i {
+  color: #99E2D0;
+  padding: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
+.bloc_menu__cartouche {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.bloc_menu--animation .animation-1 {
+  -webkit-animation: apparition_menu 200ms ease-in 200ms both;
+          animation: apparition_menu 200ms ease-in 200ms both;
+}
+
+.bloc_menu--animation .animation-2 {
+  -webkit-animation: apparition_menu 200ms ease-in 400ms both;
+          animation: apparition_menu 200ms ease-in 400ms both;
+}
+
+.bloc_menu--animation .animation-3 {
+  -webkit-animation: apparition_menu 200ms ease-in 600ms both;
+          animation: apparition_menu 200ms ease-in 600ms both;
+}
+
+.bloc_menu--animation .animation-4 {
+  -webkit-animation: apparition_menu 200ms ease-in 800ms both;
+          animation: apparition_menu 200ms ease-in 800ms both;
+}
+
+.bloc_menu--animation .animation-5 {
+  -webkit-animation: apparition_menu 200ms ease-in 1000ms both;
+          animation: apparition_menu 200ms ease-in 1000ms both;
+}
+
+.bloc_menu--animation .animation-6 {
+  -webkit-animation: apparition_menu 200ms ease-in 1200ms both;
+          animation: apparition_menu 200ms ease-in 1200ms both;
+}
+
+.bloc_menu--animation .animation-7 {
+  -webkit-animation: apparition_menu 200ms ease-in 1400ms both;
+          animation: apparition_menu 200ms ease-in 1400ms both;
+}
+
+.bloc_menu--animation .animation-8 {
+  -webkit-animation: apparition_menu 200ms ease-in 1600ms both;
+          animation: apparition_menu 200ms ease-in 1600ms both;
+}
+
+.bloc_menu--animation .animation-9 {
+  -webkit-animation: apparition_menu 200ms ease-in 1800ms both;
+          animation: apparition_menu 200ms ease-in 1800ms both;
+}
+
+.bloc_menu--animation .animation-10 {
+  -webkit-animation: apparition_menu 200ms ease-in 2000ms both;
+          animation: apparition_menu 200ms ease-in 2000ms both;
+}
+
+.bloc_menu__texte {
+  display: inline-block;
+  width: 100%;
+  margin-left: 20px;
+  overflow: hidden;
+}
+
+.bloc_menu__texte h4 {
+  margin: 15px 0 0 0;
+  padding-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bloc_menu__texte p {
+  margin-top: 5px;
+  padding-right: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.prix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-bottom: 16px;
+  margin-right: 20px;
+  font-weight: 600;
+}
+/*# sourceMappingURL=Menus.css.map */
