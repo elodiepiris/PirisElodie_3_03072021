@@ -1,0 +1,31 @@
+/* RESTAURANTS - COEURS */
+.heart-icons__container {
+    position: absolute;
+    right:50px;
+    top: 15px;
+    padding:10px;
+        .icon-full {
+        position: absolute;
+        font-size: 25px;
+        transition: 0.5s;
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:transparent;
+        transform: scale(0);
+        cursor: pointer;
+        }
+            &:hover .icon-full {
+            transform: scale(1);
+            }
+        .icon-vide {
+        position: absolute;
+        font-size: 25px;
+        }
+            &:hover .icon-vide {
+        background: $gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color:transparent;
+        }
+}

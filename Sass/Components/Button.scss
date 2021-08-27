@@ -1,0 +1,26 @@
+.btn {
+    background: $gradient;
+    border-radius: 50px;
+    min-width:180px;
+    box-shadow: $shadow;
+    @include font-medium;
+    text-align: center;
+    color:white;
+    border:0;
+    padding:15px 20px;
+    margin:10px 0;
+    transform: scale(1);
+    transition: transform 0.08s;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+        opacity:0.8;
+        box-shadow: 0 2px 8px darken($background-color, 40%);
+      }
+      &__commander {
+          margin:30px 0 0 0;
+          display: flex;
+          justify-content: center;
+
+      }
+}

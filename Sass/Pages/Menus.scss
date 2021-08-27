@@ -1,0 +1,103 @@
+/* PAGES MENUS */
+    .banner {
+    height:300px;
+    width: 100%;
+    }
+    section {
+    background-color: $background-color;
+    }
+    .bloc_menu { 
+    height: 100%;
+    background-color: $background-color;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding: 30px 0 20px 0 10px;
+    transform: translateY(-5%);
+        &__titre {
+        position:relative;
+        display:flex;
+        justify-content: space-between;
+        margin:0;
+        padding:20px 30px 0 30px;
+            .icon-vide, .icon-full {
+            top:20px;
+            }
+        }
+        &__soustitre {
+        margin:40px 20px 0 20px;
+        text-transform: uppercase;
+        color:darken($background-color, 60%);
+        font-weight: 400;
+        }
+    }
+    .border {
+    border-bottom: $color-tertiary 3px solid;
+    margin: 5px 0;
+    width: 40px;
+    }
+    .bloc_menu__container {
+    background: white;
+    box-shadow: $shadow;
+    border-radius: 15px;
+    display: flex;
+    margin:15px;
+    animation: transition_apparition 2s ease;
+    overflow: hidden;
+    cursor: pointer;
+        &:hover .icone {
+        margin-right: 0;
+        transition-duration: 0.5s;
+        }
+        &:hover i {
+        transform: rotate(360deg);
+        transition-duration: 0.5s;
+        }
+    }
+    .icone {
+    width: 80px;
+    background: $color-tertiary;
+    @include flexbox-center;
+    margin-right: -90px;
+    transition-timing-function: ease;
+        > i {
+        color: $color-tertiary;
+        padding: 5px;
+        border-radius: 50%;
+        background: white;
+        }
+    }    
+    .bloc_menu__cartouche {
+    width: 100%;
+    display: flex;
+    }
+    .bloc_menu--animation {
+    @include animation_menu;
+    }
+    .bloc_menu__texte {
+    display:inline-block;
+    width: 100%;
+    margin-left:20px;
+    overflow: hidden;
+        h4 {
+        margin:15px 0 0 0;
+        padding-right:10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        }
+        p {
+        margin-top:5px;
+        padding-right:10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;   
+        }
+    }
+    .prix {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 16px;
+    margin-right: 20px;
+    font-weight: 600;
+    }
+    

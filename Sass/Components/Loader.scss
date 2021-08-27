@@ -1,0 +1,22 @@
+/* LOADER */
+.chargement {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    height:100%;
+    width:100%;
+    z-index: 1000;
+    @include flexbox-center;
+    animation: loader 2s forwards;
+  }
+  .chargement::before {
+    content: "";
+    height: 100px;
+    width: 100px;
+    border-top: 12px solid $color-primary;
+    border-right: 12px solid $color-secondary;
+    border-bottom: 12px solid $color-tertiary;
+    border-left: 12px solid $color-shadow;
+    border-radius: 100%;
+    animation: loader_roll 2s linear;
+  }
+  

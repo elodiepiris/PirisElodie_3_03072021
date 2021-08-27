@@ -1,61 +1,21 @@
-/* POLICE */
+/* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap");
-
-/* COLORS */
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$background-color: #f6f6f6;
-$color-shadow: #dbdbdb;
-$gradient: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
-
-/* OMBRE */
-$shadow: 0 2px 8px $color-shadow;
-
-/* MIXIN */
-@mixin flexbox-center {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin font-shrikhand-titre {
-    font-family: "Shrikhand", cursive;
-    font-size: 30px;
-    text-align:center;
-    margin:0;
-    padding:15px 0 15px;
-}
-@mixin font-shrikhand-sous-titre {
-    font-family: "Shrikhand", sans-serif;
-    font-size: 26px;
-    margin:10px 0 0 0;
-}
-@mixin font-big {
-    font-size: 25px;
-    font-weight: 600;
-}
-@mixin font-medium {
-    font-size: 16px;
-    font-weight: 400;
-}
-@mixin font-medium-bold {
-    font-size: 18px;
-    font-weight: 600;
-}
-@mixin font-light {
-    font-size: 16px;
-    font-weight: 100;
-}
-@mixin decoration_none {
-    text-decoration: none;
-    color:inherit;
-}
+@import "Sass/Utils/keyframes.scss";
+@import "Sass/Utils/mixin.scss";
+@import "Sass/Utils/variables.scss";
+@import "Sass/Components/Loader.scss";
+@import "Sass/Components/Heart.scss";
+@import "Sass/Components/Button.scss";
+@import "Sass/Pages/Menus.scss";
+@import "Sass/Pages/home.scss";
+@import "Sass/Layout/Footer.scss";
+@import "Sass/Layout/Header.scss";
 
 /* use the font */
 body {
-    font-family: "Roboto", sans-serif;
-    margin:0;
+font-family: "Roboto", sans-serif;
+margin:0;
     h1 {
     @include font-shrikhand-titre;
     }
@@ -75,420 +35,12 @@ body {
     @include font-light;
     }
 }
-/* LOADER */
-.chargement {
-    position: fixed;
-    background: rgba(255, 255, 255, 0.95);
-    height:100%;
-    width:100%;
-    z-index: 1000;
-    @include flexbox-center;
-    animation: loader 2s forwards;
-  }
-  .chargement::before {
-    content: "";
-    height: 100px;
-    width: 100px;
-    border-top: 12px solid $color-primary;
-    border-right: 12px solid $color-secondary;
-    border-bottom: 12px solid $color-tertiary;
-    border-left: 12px solid $color-shadow;
-    border-radius: 100%;
-    animation: roll 2s linear;
-  }
-  
-  @keyframes loader {
-    0% {
-      visibility: visible;
-    }
-    100% {
-      visibility: hidden;
-    }
-  }
-  @keyframes roll {
-    0% {
-      transform: rotate(-360deg);
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-/* HEADER */
-#logo {
-    @include flexbox-center;
-    padding:15px 0 10px 0;
-    img {
-    height: 30px;
-    }
-}
-.localisation {
-    @include flexbox-center;
-    background-color: darken($background-color, 5%);
-    box-shadow: lightgrey 0px 3px 3px inset;
-    &__icon {
-    padding-right:10px;
-    @include font-medium;
-    }   
-    h5 {
-    margin:15px 0;
-    }
-}
-/* INTRODUCTION */
-.Introduction {
-    background-color: $background-color;
-    padding: 40px;
-    text-align: center;
-    p {
-    font-size: 17px;
-    }
-    &__titre {
-    margin:0;
-    }
-}
-.btn {
-    background: $gradient;
-    border-radius: 50px;
-    min-width:180px;
-    box-shadow: $shadow;
-    @include font-medium;
-    text-align: center;
-    color:white;
-    border:0;
-    padding:15px 20px;
-    margin:10px 0;
-    transform: scale(1);
-    transition: transform 0.08s;
-    cursor: pointer;
-    &:hover {
-        transform: scale(1.05);
-        opacity:0.8;
-        box-shadow: 0 2px 8px darken($background-color, 40%);
-      }
-      &__commander {
-          margin:30px 0 0 0;
-          display: flex;
-          justify-content: center;
-
-      }
-}
-/* FONCTIONNEMENT */
-section > h2 {
-    background-color:white;
-    padding:40px 20px 25px 20px;
-    margin:0;
-}
-.bloc_fonctionnement {
-    background: white;
-    padding-bottom:30px;
-    &__cube {
-    @include font-medium;
-    border-radius: 25px;
-    box-shadow: $shadow;
-    background-color: $background-color;
-    text-align: left;
-    border:0;
-    padding:25px 0 25px 30px;
-    margin:0 20px 30px 35px;
-    cursor: pointer;
-    transition-duration: 0.5s;
-        &:hover {
-        background: lighten($color-primary, 35%);
-        }
-        &:hover > .icon {
-        color: $color-primary;
-        } 
-    }
-}
-.number {
-    background: $color-primary;
-    color: white;
-    height: 25px;
-    width: 25px;
-    border-radius: 100px;
-    @include flexbox-center;
-    position: absolute;
-    left:20px;
-}
-
-.icon {
-padding-right:20px;
-color:rgb(99, 99, 99);
-}
-
-/* RESTAURANTS */
-
-.titre__restaurant {
-    background-color: $background-color;
-    padding:20px 10px 10px 20px;
-}
-.bloc_restaurant {
-    background-color: $background-color;
-    height:auto;
-    width: 100%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-bottom: 60px;
-    justify-items: center;
-        &__cube {
-        @include decoration_none;
-        position : relative;
-        width: 90%;
-        height: auto;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: $shadow;
-        margin:15px 15px 5px 15px;
-        transform: scale(1);
-        transition: transform 0.5s;
-        cursor: pointer;
-        &:hover {
-            transform: scale(1.03); 
-        }
-            &__cartouche {
-            display:flex;
-            align-items:center;
-            position:relative;
-            width: 100%;
-            line-height: 8px;
-            padding: 5px 0 5px 15px;
-            }
-        }
-    }
-/* RESTAURANTS - COEURS */
-.heart-icons__container {
-    position: absolute;
-    right:50px;
-    top: 15px;
-    padding:10px;
-        .icon-full {
-        position: absolute;
-        font-size: 25px;
-        transition: 0.5s;
-        background: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color:transparent;
-        transform: scale(0);
-        cursor: pointer;
-        }
-            &:hover .icon-full {
-            transform: scale(1);
-            }
-        .icon-vide {
-        position: absolute;
-        font-size: 25px;
-        }
-            &:hover .icon-vide {
-        background: $gradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color:transparent;
-        }
-}
-.photo {
-    width: 100%;
-    height: 170px;
-    border-radius: 15px 15px 0 0;
-}
-.bloc_restaurant__nouveau {
-    @include flexbox-center;
-    font-size: 14px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 80px;
-    height: 30px;
-    color: darken($color-tertiary, 40%);
-    background-color: $color-tertiary;
-}
-
-$restaurants: jay, stil, toa, louis;
-
-@each $restaurant in $restaurants {
-    .photo-#{$restaurant} {
-    background: url(images/restaurants/#{$restaurant}.jpg);
-    background-position: center;
-    background-size:cover;
-    }
-}
-/* PALETTE DU GOUT */
-    
-    .headmenu {
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-}
-    .headmenu > a {
-    color:black;
-    font-size: 20px;
-    padding-left: 25px;
-    }
-    
-    .banner {
-    background: url("images/restaurants/jay.jpg");
-    background-position: center;
-    background-size:cover;
-    height:330px;
-    }
-     
-/* PALETTE DU GOUT MENU */
-section {
-    background-color: $background-color;
-}
-.bloc_menu { 
-    height: 100%;
-    background-color: $background-color;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    padding: 30px 0 20px 0 10px;
-    transform: translateY(-5%);
-        &__titre {
-        position:relative;
-        display:flex;
-        justify-content: space-between;
-        margin:0;
-        padding:20px 30px 0 30px;
-            .icon-vide, .icon-full {
-            top:20px;
-            }
-        }
-        &__soustitre {
-        margin:40px 20px 0 20px;
-        text-transform: uppercase;
-        color:darken($background-color, 60%);
-        font-weight: 400;
-        }
-        
-}
-.border {
-    border-bottom: $color-tertiary 3px solid;
-    margin: 5px 0;
-    width: 40px;
-}
-.bloc_menu__container {
-    background: white;
-    box-shadow: $shadow;
-    border-radius: 15px;
-    display: flex;
-    margin:15px;
-    animation: transition 2s ease;
-    overflow: hidden;
-    cursor: pointer;
-        &:hover .icone {
-        margin-right: 0;
-        transition-duration: 0.5s;
-        }
-        &:hover i {
-        transform: rotate(360deg);
-        transition-duration: 0.5s;
-        }
-    }
-@keyframes transition {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-
-@mixin animation_menu {
-  @for $i from 1 through 10 {
-      .animation-#{$i} {animation: transition 200ms ease-in 100ms*$i*2 both;}
-  }
-}
-.bloc_menu__cartouche {
-width: 100%;
-display: flex;
-}
-.bloc_menu--animation {
-@include animation_menu;
-}
-
-@keyframes transition {
-    0% {
-    transform: translateY(10px);
-    opacity: 0;
-    }
-    100% {
-    transform: translateY(0);
-    opacity: 1;
-    }
-  }
-.bloc_menu__texte {
-    display:inline-block;
-    width: 100%;
-    margin-left:20px;
-    overflow: hidden;
-    h4 {
-    margin-bottom:0;
-    padding-right:10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    }
-    p {
-    margin-top:5px;
-    padding-right:10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;   
-    }
-}
-.prix {
-display: flex;
-align-items: flex-end;
-margin-bottom: 16px;
-margin-right: 20px;
-font-weight: 600;
-}
-.icone {
-width: 80px;
-background: $color-tertiary;
-@include flexbox-center;
-margin-right: -90px;
-transition-duration: 0.2s;
-transition-timing-function: ease;
-    > i {
-    color: $color-tertiary;
-    padding: 5px;
-    border-radius: 50%;
-    background: white;
-    transition-duration: 0.2s;
-    }
-}
-
-
-/* FOOTER */
-.footer {
-    background-color: darken($background-color, 75%);
-    padding: 15px 0 20px 20px;
-    line-height: 25px;
-    font-size: 15px;
-    color:white;
-    i {
-        color:white;
-        padding-right:10px;
-    }
-    a {
-    @include decoration_none
-    }
-  }
-.logofooter {
-    filter:invert(100%);
-    height:16px;
-    padding:15px 0 15px 0;
-}
-
 /********** MEDIA QUERIES **********/
 @media only screen and (min-width : 600px) {
     h2 {
-        display: flex;
-        justify-content: center;
-     }
+    display: flex;
+    justify-content: center;
+    }
 /* RESTAURANT */
     .bloc_restaurant {
     display: grid;
@@ -499,18 +51,18 @@ transition-timing-function: ease;
 @media only screen and (min-width : 750px) {
 
     .footer {
-        @include flexbox-center;
+    @include flexbox-center;
         a, .logofooter {
         padding-right:20px;
         }
     }
-    /* FONCTIONNEMENT */
+/* FONCTIONNEMENT */
     .bloc_fonctionnement {
-        background: white;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 0 10px;
-        flex-wrap:wrap;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10px;
+    flex-wrap:wrap;
         &__cube {
             padding: 0 20px 20px 20px;
             margin: 35px 12px;
@@ -523,10 +75,30 @@ transition-timing-function: ease;
         }
     }
     .number {
-            position: relative;
-            top: -10px;
-            left: 0;
-        } 
+    position: relative;
+    top: -10px;
+    left: 0;
+    } 
+/* PAGES MENUS */
+    .bloc_menu {
+    padding-bottom:10px;
+        &--grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        }
+        &__categories {
+        display: grid;
+        align-self: start;
+        grid-template-rows: 1fr 1fr;
+        margin:0 20px;
+        }
+        &__soustitre { 
+        margin-left:35px;
+        }
+    }
+    .bloc_menu__container {
+    margin:10px;
+    } 
 }
 @media only screen and (min-width : 1000px) {
 /* RESTAURANT */
@@ -535,20 +107,23 @@ transition-timing-function: ease;
     }
 }
 @media only screen and (min-width : 1200px) {
-/* PALETTE DU GOUT MENU */
-.bloc_menu {
+/* PAGES MENUS */
+    .bloc_menu {
     padding-bottom:10px;
-    &__categories {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin:0 20px;
+        &--grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        }
+        &__categories {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        margin:0 20px;
+        }
+        &__soustitre { 
+        margin-left:35px;
+        }
     }
-    &__soustitre { 
-    margin-left:35px;
-    }
-}
-.bloc_menu__container {
+    .bloc_menu__container {
     margin:10px;
-    }
-        
+    }      
 }

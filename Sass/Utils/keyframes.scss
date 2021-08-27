@@ -1,0 +1,33 @@
+@keyframes loader {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+    }
+  }
+  @keyframes loader_roll {
+    0% {
+      transform: rotate(-360deg);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  @keyframes transition_apparition {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes apparition_menu {
+    0% {
+    transform: scale(0);
+    }
+    100% {
+    transform: scale(1);
+    }
+  }

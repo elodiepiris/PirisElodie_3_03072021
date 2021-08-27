@@ -1,0 +1,31 @@
+/* HOME */
+#logo {
+    @include flexbox-center;
+    padding:15px 0 10px 0;
+        img {
+        height: 30px;
+        }
+    }
+    .localisation {
+    @include flexbox-center;
+    background-color: darken($background-color, 5%);
+    box-shadow: lightgrey 0px 3px 3px inset;
+        &__icon {
+        padding-right:10px;
+        @include font-medium;
+        }   
+        h5 {
+        margin:15px 0;
+        }
+    }
+/* PAGES MENUS */
+.headmenu {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    }
+    .headmenu > a {
+    color:black;
+    font-size: 20px;
+    padding-left: 25px;
+    }

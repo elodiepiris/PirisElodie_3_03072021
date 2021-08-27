@@ -1,0 +1,46 @@
+/* MIXINS FLEXBOX */
+@mixin flexbox-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+/* MIXINS FONTS */
+
+@mixin font-shrikhand-titre {
+    font-family: "Shrikhand", cursive;
+    font-size: 30px;
+    text-align:center;
+    margin:0;
+    padding:15px 0 15px;
+}
+@mixin font-shrikhand-sous-titre {
+    font-family: "Shrikhand", sans-serif;
+    font-size: 26px;
+    margin:10px 0 0 0;
+}
+@mixin font-big {
+    font-size: 25px;
+    font-weight: 600;
+}
+@mixin font-medium {
+    font-size: 16px;
+    font-weight: 400;
+}
+@mixin font-medium-bold {
+    font-size: 18px;
+    font-weight: 600;
+}
+@mixin font-light {
+    font-size: 16px;
+    font-weight: 100;
+}
+@mixin decoration_none {
+    text-decoration: none;
+    color:inherit;
+}
+/* MIXINS ANIMATIONS */
+@mixin animation_menu {
+    @for $i from 1 through 10 {
+        .animation-#{$i} {animation: apparition_menu 200ms ease-in 100ms*$i*2 both;}
+    }
+  }
