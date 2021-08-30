@@ -919,6 +919,8 @@ body p {
   .bloc_menu__categories {
     display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
     margin: 0 20px;
   }
   .bloc_menu__soustitre {
