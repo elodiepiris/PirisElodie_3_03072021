@@ -414,6 +414,7 @@ section {
   padding-right: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bloc_menu__texte p {
@@ -421,6 +422,7 @@ section {
   padding-right: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .prix {
