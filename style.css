@@ -302,8 +302,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   margin: 15px;
-  -webkit-animation: transition_apparition 1s ease;
-          animation: transition_apparition 1s ease;
+  -webkit-animation: transition_apparition 2s ease;
+          animation: transition_apparition 2s ease;
   overflow: hidden;
   cursor: pointer;
 }
@@ -919,8 +919,6 @@ body p {
   .bloc_menu__categories {
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
     margin: 0 20px;
   }
   .bloc_menu__soustitre {

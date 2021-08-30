@@ -253,16 +253,16 @@ section {
   margin: 15px 0 0 0;
   padding-right: 10px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bloc_menu__texte p {
   margin-top: 5px;
   padding-right: 10px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .prix {
