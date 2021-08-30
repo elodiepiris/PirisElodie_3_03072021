@@ -57,10 +57,10 @@
         }
     }
     .icone {
-    min-width: 80px;
     background: $color-tertiary;
     @include flexbox-center;
     margin-right: -90px;
+    width:20%;
     transition-timing-function: ease;
         > i {
         color: $color-tertiary;
@@ -75,10 +75,11 @@
     }
     .bloc_menu--animation {
     @include animation_menu;
+    margin:15px;
     }
     .bloc_menu__texte {
     display:inline-block;
-    width: 100%;
+    width: 80%;
     margin-left:20px;
     overflow: hidden;
         h4 {

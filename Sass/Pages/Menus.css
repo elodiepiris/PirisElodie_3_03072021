@@ -161,7 +161,6 @@ section {
 }
 
 .icone {
-  min-width: 80px;
   background: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -173,6 +172,7 @@ section {
       -ms-flex-align: center;
           align-items: center;
   margin-right: -90px;
+  width: 20%;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
@@ -189,6 +189,10 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.bloc_menu--animation {
+  margin: 15px;
 }
 
 .bloc_menu--animation .animation-1 {
@@ -243,7 +247,7 @@ section {
 
 .bloc_menu__texte {
   display: inline-block;
-  width: 100%;
+  width: 80%;
   margin-left: 20px;
   overflow: hidden;
 }
