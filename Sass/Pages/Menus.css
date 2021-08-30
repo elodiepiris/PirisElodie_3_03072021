@@ -142,8 +142,8 @@ section {
   display: -ms-flexbox;
   display: flex;
   margin: 15px;
-  -webkit-animation: transition_apparition 2s ease;
-          animation: transition_apparition 2s ease;
+  -webkit-animation: transition_apparition 1s ease;
+          animation: transition_apparition 1s ease;
   overflow: hidden;
   cursor: pointer;
 }
@@ -193,53 +193,53 @@ section {
 }
 
 .bloc_menu--animation .animation-1 {
-  -webkit-animation: apparition_menu 200ms ease-in 200ms both;
-          animation: apparition_menu 200ms ease-in 200ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 200ms both;
+          animation: apparition_menu 100ms ease-in 200ms both;
 }
 
 .bloc_menu--animation .animation-2 {
-  -webkit-animation: apparition_menu 200ms ease-in 400ms both;
-          animation: apparition_menu 200ms ease-in 400ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 400ms both;
+          animation: apparition_menu 100ms ease-in 400ms both;
 }
 
 .bloc_menu--animation .animation-3 {
-  -webkit-animation: apparition_menu 200ms ease-in 600ms both;
-          animation: apparition_menu 200ms ease-in 600ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 600ms both;
+          animation: apparition_menu 100ms ease-in 600ms both;
 }
 
 .bloc_menu--animation .animation-4 {
-  -webkit-animation: apparition_menu 200ms ease-in 800ms both;
-          animation: apparition_menu 200ms ease-in 800ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 800ms both;
+          animation: apparition_menu 100ms ease-in 800ms both;
 }
 
 .bloc_menu--animation .animation-5 {
-  -webkit-animation: apparition_menu 200ms ease-in 1000ms both;
-          animation: apparition_menu 200ms ease-in 1000ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 1000ms both;
+          animation: apparition_menu 100ms ease-in 1000ms both;
 }
 
 .bloc_menu--animation .animation-6 {
-  -webkit-animation: apparition_menu 200ms ease-in 1200ms both;
-          animation: apparition_menu 200ms ease-in 1200ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 1200ms both;
+          animation: apparition_menu 100ms ease-in 1200ms both;
 }
 
 .bloc_menu--animation .animation-7 {
-  -webkit-animation: apparition_menu 200ms ease-in 1400ms both;
-          animation: apparition_menu 200ms ease-in 1400ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 1400ms both;
+          animation: apparition_menu 100ms ease-in 1400ms both;
 }
 
 .bloc_menu--animation .animation-8 {
-  -webkit-animation: apparition_menu 200ms ease-in 1600ms both;
-          animation: apparition_menu 200ms ease-in 1600ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 1600ms both;
+          animation: apparition_menu 100ms ease-in 1600ms both;
 }
 
 .bloc_menu--animation .animation-9 {
-  -webkit-animation: apparition_menu 200ms ease-in 1800ms both;
-          animation: apparition_menu 200ms ease-in 1800ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 1800ms both;
+          animation: apparition_menu 100ms ease-in 1800ms both;
 }
 
 .bloc_menu--animation .animation-10 {
-  -webkit-animation: apparition_menu 200ms ease-in 2000ms both;
-          animation: apparition_menu 200ms ease-in 2000ms both;
+  -webkit-animation: apparition_menu 100ms ease-in 2000ms both;
+          animation: apparition_menu 100ms ease-in 2000ms both;
 }
 
 .bloc_menu__texte {
@@ -253,7 +253,6 @@ section {
   margin: 15px 0 0 0;
   padding-right: 10px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 
@@ -261,7 +260,6 @@ section {
   margin-top: 5px;
   padding-right: 10px;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
 }
 

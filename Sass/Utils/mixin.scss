@@ -41,6 +41,6 @@
 /* MIXINS ANIMATIONS */
 @mixin animation_menu {
     @for $i from 1 through 10 {
-        .animation-#{$i} {animation: apparition_menu 200ms ease-in 100ms*$i*2 both;}
+        .animation-#{$i} {animation: apparition_menu 100ms ease-in 100ms*$i*2 both;}
     }
   }
