@@ -141,7 +141,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 15px;
   -webkit-animation: transition_apparition 2s ease;
           animation: transition_apparition 2s ease;
   overflow: hidden;
