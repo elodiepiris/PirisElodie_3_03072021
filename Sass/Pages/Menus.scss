@@ -45,9 +45,15 @@
     border-radius: 15px;
     display: flex;
     animation: transition_apparition 2s ease;
-    overflow: hidden;
     cursor: pointer;
+    overflow: hidden;
+    margin:15px;
+        &:hover {
+        display:flex;
+        justify-content: flex-end;
+        }
         &:hover .icone {
+        min-width:60px;
         margin-right: 0;
         transition-duration: 0.5s;
         }
@@ -60,7 +66,6 @@
     background: $color-tertiary;
     @include flexbox-center;
     margin-right: -90px;
-    width:20%;
     transition-timing-function: ease;
         > i {
         color: $color-tertiary;
@@ -72,29 +77,21 @@
     .bloc_menu__cartouche {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     }
     .bloc_menu--animation {
     @include animation_menu;
-    margin:15px;
     }
     .bloc_menu__texte {
-    display:inline-block;
-    width: 80%;
     margin-left:20px;
     overflow: hidden;
         h4 {
         margin:15px 0 0 0;
         padding-right:10px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
         }
         p {
         margin-top:5px;
         padding-right:10px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;   
         }
     }
     .prix {
@@ -102,6 +99,6 @@
     align-items: flex-end;
     margin-bottom: 16px;
     margin-right: 20px;
-    font-weight: 600;
+    font-weight: 700;
     }
     

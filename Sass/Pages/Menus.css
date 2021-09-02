@@ -143,11 +143,22 @@ section {
   display: flex;
   -webkit-animation: transition_apparition 2s ease;
           animation: transition_apparition 2s ease;
-  overflow: hidden;
   cursor: pointer;
+  overflow: hidden;
+  margin: 15px;
+}
+
+.bloc_menu__container:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .bloc_menu__container:hover .icone {
+  min-width: 60px;
   margin-right: 0;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
@@ -172,7 +183,6 @@ section {
       -ms-flex-align: center;
           align-items: center;
   margin-right: -90px;
-  width: 20%;
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
@@ -189,10 +199,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.bloc_menu--animation {
-  margin: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .bloc_menu--animation .animation-1 {
@@ -246,8 +255,6 @@ section {
 }
 
 .bloc_menu__texte {
-  display: inline-block;
-  width: 80%;
   margin-left: 20px;
   overflow: hidden;
 }
@@ -255,17 +262,11 @@ section {
 .bloc_menu__texte h4 {
   margin: 15px 0 0 0;
   padding-right: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .bloc_menu__texte p {
   margin-top: 5px;
   padding-right: 10px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .prix {
@@ -277,6 +278,6 @@ section {
           align-items: flex-end;
   margin-bottom: 16px;
   margin-right: 20px;
-  font-weight: 600;
+  font-weight: 700;
 }
 /*# sourceMappingURL=Menus.css.map */
