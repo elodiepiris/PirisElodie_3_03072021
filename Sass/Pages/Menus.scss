@@ -78,6 +78,9 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    &:hover {
+        width:80%;
+    }
     }
     .bloc_menu--animation {
     @include animation_menu;
@@ -88,10 +91,16 @@
         h4 {
         margin:15px 0 0 0;
         padding-right:10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         }
         p {
         margin-top:5px;
         padding-right:10px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         }
     }
     .prix {

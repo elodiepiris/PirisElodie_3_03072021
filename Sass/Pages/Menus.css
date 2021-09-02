@@ -204,6 +204,10 @@ section {
           justify-content: space-between;
 }
 
+.bloc_menu__cartouche:hover {
+  width: 80%;
+}
+
 .bloc_menu--animation .animation-1 {
   -webkit-animation: apparition_menu 100ms ease-in 200ms both;
           animation: apparition_menu 100ms ease-in 200ms both;
@@ -262,11 +266,17 @@ section {
 .bloc_menu__texte h4 {
   margin: 15px 0 0 0;
   padding-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .bloc_menu__texte p {
   margin-top: 5px;
   padding-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .prix {
