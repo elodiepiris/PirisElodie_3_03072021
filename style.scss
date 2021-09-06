@@ -1,16 +1,16 @@
 /* IMPORTS */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;400;700&display=swap");
-@import "Sass/Utils/keyframes.scss";
-@import "Sass/Utils/mixin.scss";
-@import "Sass/Utils/variables.scss";
-@import "Sass/Components/Loader.scss";
-@import "Sass/Components/Heart.scss";
-@import "Sass/Components/Button.scss";
-@import "Sass/Pages/Menus.scss";
-@import "Sass/Pages/home.scss";
-@import "Sass/Layout/Footer.scss";
-@import "Sass/Layout/Header.scss";
+@import "Sass/Utils/keyframes";
+@import "Sass/Utils/variables";
+@import "Sass/Utils/mixin";
+@import "Sass/Components/Loader";
+@import "Sass/Components/Heart";
+@import "Sass/Components/Button";
+@import "Sass/Pages/Menus";
+@import "Sass/Pages/home";
+@import "Sass/Layout/Footer";
+@import "Sass/Layout/Header";
 
 /* use the font */
 body {
@@ -45,14 +45,6 @@ margin:0;
     .bloc_restaurant {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    }
-.icone {
-    min-width: 80px;
-}
-.bloc_menu__cartouche {
-    &:hover {
-        width:90%;
-    }
     }
 }
 

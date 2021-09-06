@@ -40,32 +40,31 @@
     width: 40px;
     }
     .bloc_menu__container {
+    display: flex;
     background: white;
     box-shadow: $shadow;
     border-radius: 15px;
-    display: flex;
     animation: transition_apparition 2s ease;
     cursor: pointer;
     overflow: hidden;
     margin:15px;
         &:hover {
         display:flex;
-        justify-content: flex-end;
         }
         &:hover .icone {
-        min-width:60px;
+        width:70px;
         margin-right: 0;
         transition-duration: 0.5s;
         }
         &:hover i {
         transform: rotate(360deg);
         transition-duration: 0.5s;
-        }
+        }  
     }
     .icone {
     background: $color-tertiary;
     @include flexbox-center;
-    margin-right: -90px;
+    margin-right: -100px;
     transition-timing-function: ease;
         > i {
         color: $color-tertiary;
@@ -74,40 +73,33 @@
         background: white;
         }
     }    
-    .bloc_menu__cartouche {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    &:hover {
-    width:80%;
-    }
-    }
     .bloc_menu--animation {
     @include animation_menu;
     }
     .bloc_menu__texte {
     margin-left:20px;
     overflow: hidden;
+    width:calc(80% - 20px);
         h4 {
         margin:15px 0 0 0;
-        padding-right:10px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         }
         p {
         margin-top:5px;
-        padding-right:10px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         }
     }
     .prix {
+    width:calc(20% - 20px);
     display: flex;
     align-items: flex-end;
+    justify-content:end;
+    padding-right:20px;
     margin-bottom: 16px;
-    margin-right: 20px;
     font-weight: 700;
     }
     
