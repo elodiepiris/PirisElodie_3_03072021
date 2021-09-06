@@ -79,7 +79,8 @@
     .bloc_menu__texte {
     margin-left:20px;
     overflow: hidden;
-    width:calc(80% - 20px);
+    width:calc(80% - 30px);
+    padding-right:10px;
         h4 {
         margin:15px 0 0 0;
         overflow: hidden;
@@ -94,11 +95,11 @@
         }
     }
     .prix {
-    width:calc(20% - 20px);
+    width:calc(20% - 15px);
     display: flex;
     align-items: flex-end;
     justify-content:end;
-    padding-right:20px;
+    padding-right:15px;
     margin-bottom: 16px;
     font-weight: 700;
     }
