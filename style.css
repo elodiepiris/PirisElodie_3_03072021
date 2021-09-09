@@ -314,6 +314,7 @@ section {
           transition-duration: 0.5s;
   -webkit-transform: translateX(-60px);
           transform: translateX(-60px);
+  border-radius: 0 15px 15px 0;
 }
 
 .bloc_menu__container:hover i {
