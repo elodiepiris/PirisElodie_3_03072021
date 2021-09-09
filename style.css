@@ -133,7 +133,6 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   -webkit-transform: scale(0);
@@ -153,7 +152,6 @@
 
 .heart-icons__container:hover .icon-vide {
   background: linear-gradient(175deg, #FF79DA 10%, #9356DC 90%);
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }

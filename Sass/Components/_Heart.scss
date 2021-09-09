@@ -9,7 +9,6 @@
         font-size: 25px;
         transition: 0.5s;
         background: $gradient;
-        background-clip: text;
         -webkit-background-clip: text;
         color:transparent;
         transform: scale(0);
@@ -24,7 +23,6 @@
         }
             &:hover .icon-vide {
         background: $gradient;
-        background-clip: text;
         -webkit-background-clip: text;
         color:transparent;
         }
