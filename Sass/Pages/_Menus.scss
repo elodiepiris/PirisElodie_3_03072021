@@ -46,26 +46,31 @@
     border-radius: 15px;
     animation: transition_apparition 2s ease;
     cursor: pointer;
-    overflow: hidden;
     margin:15px;
-        &:hover {
-        display:flex;
-        }
+    overflow: hidden;
         &:hover .icone {
-        width:70px;
-        margin-right: 0;
+        min-width:70px;
         transition-duration: 0.5s;
+        transform: translateX(-30px);
         }
         &:hover i {
         transform: rotate(360deg);
         transition-duration: 0.5s;
-        }  
+        }
+        &:hover .prix {
+        transition-duration: 0.5s;
+        transform: translateX(-30px); 
+        padding-right:0;   
+        }   
+        &:hover .bloc_menu__texte {
+        width:calc(80% - 80px);
+        padding-right:20px;
+        }
     }
     .icone {
     background: $color-tertiary;
     @include flexbox-center;
-    margin-right: -100px;
-    transition-timing-function: ease;
+    margin-right: -1000px;
         > i {
         color: $color-tertiary;
         padding: 5px;
@@ -85,7 +90,7 @@
         margin:15px 0 0 0;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        white-space:nowrap;
         }
         p {
         margin-top:5px;
@@ -95,12 +100,10 @@
         }
     }
     .prix {
-    width:calc(20% - 20px);
+    width:20%;
     display: flex;
     align-items: flex-end;
-    justify-content:end;
-    padding-right:20px;
+    justify-content: center;
     margin-bottom: 16px;
     font-weight: 700;
     }
-    
