@@ -312,8 +312,8 @@ section {
   min-width: 70px;
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
 }
 
 .bloc_menu__container:hover i {
@@ -326,14 +326,13 @@ section {
 .bloc_menu__container:hover .prix {
   -webkit-transition-duration: 0.5s;
           transition-duration: 0.5s;
-  -webkit-transform: translateX(-30px);
-          transform: translateX(-30px);
-  padding-right: 0;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
 .bloc_menu__container:hover .bloc_menu__texte {
-  width: calc(80% - 80px);
-  padding-right: 20px;
+  width: calc(80% - 70px);
+  padding-right: 40px;
 }
 
 .icone {
@@ -347,7 +346,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: -1000px;
+  margin-right: -110px;
 }
 
 .icone > i {

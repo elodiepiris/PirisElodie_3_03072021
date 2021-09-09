@@ -51,7 +51,7 @@
         &:hover .icone {
         min-width:70px;
         transition-duration: 0.5s;
-        transform: translateX(-30px);
+        transform: translateX(-60px);
         }
         &:hover i {
         transform: rotate(360deg);
@@ -59,18 +59,17 @@
         }
         &:hover .prix {
         transition-duration: 0.5s;
-        transform: translateX(-30px); 
-        padding-right:0;   
+        transform: translateX(-50px); 
         }   
         &:hover .bloc_menu__texte {
-        width:calc(80% - 80px);
-        padding-right:20px;
+        width:calc(80% - 70px);
+        padding-right:40px;
         }
     }
     .icone {
     background: $color-tertiary;
     @include flexbox-center;
-    margin-right: -1000px;
+    margin-right: -110px;
         > i {
         color: $color-tertiary;
         padding: 5px;
